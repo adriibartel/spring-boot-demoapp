@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado del palíndromo</title>
+</head>
+<body>
+<h1>Resultado</h1>
+<p>
+    <span th:text="${textoAnalizado}"></span>
+    <span th:if="${esPalindromo}">es un palíndromo.</span>
+    <span th:unless="${esPalindromo}">no es un palíndromo.</span>
+</p>
+<a th:href="@{/palindromo}">Probar otra palabra o frase</a>
+</body>
+</html>

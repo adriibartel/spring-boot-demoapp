@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Comprobar palíndromo</title>
+</head>
+<body>
+<h1>Comprobar si es un palíndromo</h1>
+<form th:action="@{/palindromo}" th:object="${palindromoForm}" method="post">
+    <label for="texto">Palabra o frase:</label>
+    <input id="texto" type="text" th:field="*{texto}" maxlength="100" required>
+    <span th:if="${#fields.hasErrors('texto')}" th:errors="*{texto}"></span>
+    <button type="submit">Comprobar</button>
+</form>
+<a th:href="@{/}">Volver al inicio</a>
+</body>
+</html>
